@@ -21,9 +21,11 @@ const projects = [
   },
   {
     number: '03',
-    category: 'Visual identity',
-    title: 'Graphic design',
-    note: 'Add selected designs and the context behind each piece.',
+    category: 'Graphic Design & Branding',
+    title: 'Apno Ka Kitchen — Brand Creative',
+    note: 'A promotional brand creative combining visual identity, contact information, and an order-focused call to action for a food brand.',
+    image: '/apno-kitchen-design.png',
+    imageFit: 'contain',
     tone: 'tone-sand',
   },
   {
