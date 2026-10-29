@@ -11,7 +11,7 @@ function ProjectCard({ project }) {
           <img
             className="project-preview-image"
             src={project.image}
-            alt={`${project.title} social media creative`}
+            alt={project.imageAlt || `${project.title} social media creative`}
           />
         ) : (
           <>

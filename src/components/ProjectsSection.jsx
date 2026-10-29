@@ -31,8 +31,11 @@ const projects = [
   {
     number: '04',
     category: 'E-commerce',
-    title: 'Shopify websites',
-    note: 'Add verified storefront screenshots and project details.',
+    title: 'Badri Vishal – Shopify Store Development',
+    note: 'Designed and developed a premium customized-products e-commerce store using Shopify, featuring a luxury black-and-gold theme, product pages, and a customer-focused shopping experience.',
+    image: '/badri-vishal-website.png',
+    imageFit: 'contain',
+    imageAlt: 'Badri Vishal Shopify store website screenshot',
     tone: 'tone-blue',
   },
   {
