@@ -587,6 +587,16 @@
 .tone-rose .project-preview { background: #2a2221; }
 .tone-ochre .project-preview { background: #2d271c; }
 
+@media (max-width: 768px) {
+  .project-preview.has-image {
+    background: #10100f;
+  }
+
+  .project-preview-image {
+    object-fit: contain;
+  }
+}
+
 .preview-label,
 .preview-instruction,
 .preview-corner {
