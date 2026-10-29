@@ -15,6 +15,8 @@ const projects = [
     category: 'Paid social',
     title: 'Meta Ads',
     note: 'Add approved campaign visuals; no performance claims included.',
+    image: '/meta-ads-project.png',
+    imageFit: 'contain',
     tone: 'tone-violet',
   },
   {

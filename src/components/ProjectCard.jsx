@@ -1,6 +1,8 @@
 function ProjectCard({ project }) {
+  const imageFitClass = project.imageFit === 'contain' ? ' project-card--contain-image' : ''
+
   return (
-    <article className={`project-card ${project.tone}`}>
+    <article className={`project-card ${project.tone}${imageFitClass}`}>
       <div
         className={`project-preview${project.image ? ' has-image' : ''}`}
         aria-label={`${project.title} project preview`}
