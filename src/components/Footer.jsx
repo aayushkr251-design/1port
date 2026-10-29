@@ -12,7 +12,11 @@ function Footer() {
     <footer className="site-footer">
       <div className="section-inner footer-main">
         <a className="footer-brand" href="#home">
-          <span>Aayush Kumar</span>
+          <img
+            className="brand-logo footer-logo"
+            src="/aayush-logo.png"
+            alt="Aayush Kumar"
+          />
           <small>AI, creativity & digital growth</small>
         </a>
         <nav className="footer-nav" aria-label="Footer navigation">

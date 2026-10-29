@@ -38,19 +38,36 @@
 .wordmark,
 .footer-brand {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
   text-decoration: none;
 }
 
-.wordmark-name {
-  color: var(--paper);
-  font-family: var(--serif);
-  font-size: 19px;
-  letter-spacing: 0.015em;
+.wordmark {
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: block;
+  flex: none;
+  object-fit: contain;
+}
+
+.nav-logo {
+  width: 56px;
+  height: 56px;
+}
+
+.footer-brand {
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 58px;
+  height: 58px;
 }
 
 .wordmark-role {
-  margin-top: 2px;
   color: var(--muted);
   font-size: 9px;
   letter-spacing: 0.18em;
@@ -241,6 +258,10 @@
   animation: rise-in 760ms 120ms both;
 }
 
+.portrait-frame:hover .portrait-image {
+  transform: scale(1.025);
+}
+
 .portrait-topline,
 .portrait-caption {
   display: flex;
@@ -259,101 +280,15 @@
   position: relative;
   height: clamp(320px, 38vw, 440px);
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 50% 35%, rgb(200 164 93 / 10%), transparent 58%),
-    linear-gradient(145deg, #24211a 0%, #171613 52%, #100f0d 100%);
 }
 
-.portrait-art::before,
-.portrait-art::after {
-  position: absolute;
-  content: "";
-  inset: 14px;
-  border: 1px solid rgb(232 215 174 / 9%);
-}
-
-.portrait-art::after {
-  inset: 28px;
-  border-color: rgb(232 215 174 / 6%);
-}
-
-.portrait-orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 72%;
-  aspect-ratio: 1;
-  border: 1px solid rgb(200 164 93 / 26%);
-  border-radius: 50%;
-  transform: translate(-50%, -52%);
-}
-
-.orbit-two {
-  width: 54%;
-  border-color: rgb(200 164 93 / 17%);
-}
-
-.portrait-silhouette {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 25px;
-}
-
-.silhouette-head {
-  z-index: 1;
-  width: 94px;
-  height: 116px;
-  border: 1px solid rgb(232 215 174 / 27%);
-  border-radius: 48% 48% 43% 43%;
-  background: linear-gradient(145deg, #373128, #1d1b17 78%);
-  box-shadow: inset -14px -5px 25px rgb(0 0 0 / 23%);
-}
-
-.silhouette-body {
-  width: 228px;
-  height: 146px;
-  margin-top: -6px;
-  border: 1px solid rgb(232 215 174 / 23%);
-  border-radius: 50% 50% 0 0;
-  background: linear-gradient(135deg, #363127, #1c1a17 66%);
-  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
-}
-
-.portrait-cross {
-  position: absolute;
-  z-index: 2;
-  width: 13px;
-  height: 13px;
-}
-
-.portrait-cross::before,
-.portrait-cross::after {
-  position: absolute;
-  top: 6px;
-  left: 0;
-  width: 13px;
-  height: 1px;
-  content: "";
-  background: var(--gold);
-}
-
-.portrait-cross::after {
-  transform: rotate(90deg);
-}
-
-.cross-one {
-  top: 21%;
-  left: 22%;
-}
-
-.cross-two {
-  right: 19%;
-  bottom: 23%;
-  transform: scale(0.65);
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 64% center;
+  transition: transform 350ms ease;
 }
 
 .portrait-caption {
@@ -590,7 +525,8 @@
 
 .project-preview {
   position: relative;
-  min-height: 260px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -618,6 +554,22 @@
   aspect-ratio: 1;
   border-color: rgb(242 233 207 / 10%);
   transform: rotate(23deg);
+}
+
+.project-preview-image {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-preview.has-image::before,
+.project-preview.has-image::after {
+  z-index: 0;
+  pointer-events: none;
 }
 
 .project-card:hover .project-preview::before {
@@ -902,14 +854,7 @@
   gap: 28px;
 }
 
-.footer-brand span {
-  color: var(--paper);
-  font-family: var(--serif);
-  font-size: 17px;
-}
-
 .footer-brand small {
-  margin-top: 5px;
   color: var(--muted);
   font-size: 8px;
   letter-spacing: 0.08em;
@@ -997,6 +942,17 @@
 
   .nav-shell {
     min-height: 70px;
+  }
+
+  .nav-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .wordmark-role {
+    max-width: 90px;
+    font-size: 8px;
+    line-height: 1.5;
   }
 
   .menu-toggle {
@@ -1152,10 +1108,6 @@
     gap: 31px 16px;
   }
 
-  .project-preview {
-    min-height: clamp(155px, 40vw, 220px);
-  }
-
   .project-meta h3 {
     font-size: 19px;
   }
@@ -1240,10 +1192,6 @@
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 28px;
-  }
-
-  .project-preview {
-    min-height: 230px;
   }
 
   .footer-bottom {

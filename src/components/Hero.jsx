@@ -27,24 +27,17 @@ function Hero() {
         </p>
       </div>
 
-      <div
-        className="portrait-frame"
-        role="img"
-        aria-label="Profile photo placeholder. Replace this graphic with a portrait of Aayush Kumar."
-      >
+      <div className="portrait-frame">
         <div className="portrait-topline">
           <span>PROFILE / 01</span>
-          <span>ADD YOUR PHOTO</span>
+          <span>PERSONAL BRAND</span>
         </div>
-        <div className="portrait-art" aria-hidden="true">
-          <div className="portrait-orbit orbit-one" />
-          <div className="portrait-orbit orbit-two" />
-          <div className="portrait-silhouette">
-            <span className="silhouette-head" />
-            <span className="silhouette-body" />
-          </div>
-          <span className="portrait-cross cross-one" />
-          <span className="portrait-cross cross-two" />
+        <div className="portrait-art">
+          <img
+            className="portrait-image"
+            src="/aayush-profile.jpg"
+            alt="Aayush Kumar - Digital Marketing Professional"
+          />
         </div>
         <div className="portrait-caption">
           <div>

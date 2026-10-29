@@ -20,7 +20,11 @@ function Navbar() {
     <header className="site-header">
       <nav className="nav-shell" aria-label="Main navigation">
         <a className="wordmark" href="#home" onClick={closeMenu}>
-          <span className="wordmark-name">Aayush Kumar</span>
+          <img
+            className="brand-logo nav-logo"
+            src="/aayush-logo.png"
+            alt="Aayush Kumar"
+          />
           <span className="wordmark-role">Digital creative</span>
         </a>
 

@@ -6,7 +6,8 @@ const projects = [
     number: '01',
     category: 'Creative & digital',
     title: 'BizNeeti',
-    note: 'Add verified work samples and a short project description.',
+    note: 'Selected social media creative designed for BizNeeti, showcasing visual communication, branding, and digital marketing creativity.',
+    image: '/bizneeti-project.png',
     tone: 'tone-olive',
   },
   {
