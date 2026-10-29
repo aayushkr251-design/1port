@@ -47,9 +47,12 @@ const projects = [
   },
   {
     number: '06',
-    category: 'Social presence',
-    title: 'Social media',
-    note: 'Add approved creative samples and relevant context.',
+    category: 'Social Media Marketing & Design',
+    title: 'Global Career — Social Media Creative',
+    note: 'Designed a professional social media creative for Global Career Education Services, combining brand identity, educational service information, contact details, and a clear call to action.',
+    image: '/global-study-post.png',
+    imageFit: 'contain-frame',
+    imageAlt: 'Global Career Education Services social media creative',
     tone: 'tone-ochre',
   },
 ]

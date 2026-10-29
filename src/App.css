@@ -584,6 +584,21 @@
   display: none;
 }
 
+.project-card--contain-frame-image .project-preview {
+  aspect-ratio: 16 / 9;
+  background: #10100f;
+}
+
+.project-card--contain-frame-image .project-preview-image {
+  object-fit: contain;
+}
+
+.project-card--contain-frame-image .project-preview::before,
+.project-card--contain-frame-image .project-preview::after,
+.project-card--contain-frame-image .preview-corner {
+  display: none;
+}
+
 .project-preview.has-image::before,
 .project-preview.has-image::after {
   z-index: 0;

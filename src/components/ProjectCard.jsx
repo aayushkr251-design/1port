@@ -1,5 +1,7 @@
 function ProjectCard({ project }) {
-  const imageFitClass = project.imageFit === 'contain' ? ' project-card--contain-image' : ''
+  const imageFitClass = project.imageFit
+    ? ` project-card--${project.imageFit}-image`
+    : ''
 
   return (
     <article className={`project-card ${project.tone}${imageFitClass}`}>
