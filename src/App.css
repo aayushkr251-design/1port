@@ -714,18 +714,22 @@
   background: #11110f;
 }
 
-.placeholder-index,
-.editable-note {
+.placeholder-index {
   color: var(--gold);
   font-size: 8px;
   letter-spacing: 0.15em;
 }
 
-.placeholder-symbol {
-  margin-top: 47px;
-  color: rgb(200 164 93 / 60%);
-  font-family: var(--serif);
-  font-size: 30px;
+.experience-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.experience-duration {
+  color: var(--muted);
+  font-size: 9px;
+  text-align: right;
 }
 
 .experience-placeholder h3,
@@ -744,6 +748,39 @@
   color: var(--muted);
   font-size: 10px;
   line-height: 1.8;
+}
+
+.experience-placeholder .experience-role {
+  max-width: none;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-size: 9px;
+}
+
+.experience-placeholder h3 {
+  margin-top: 40px;
+}
+
+.experience-placeholder .experience-description {
+  max-width: 460px;
+  margin-bottom: 18px;
+}
+
+.experience-responsibilities {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.65;
+  list-style: none;
+}
+
+.experience-responsibilities li::before {
+  margin-right: 9px;
+  color: var(--gold);
+  content: "—";
 }
 
 .education-section {
